@@ -72,7 +72,28 @@ le = preprocessing.LabelEncoder()
 train_encoded=le.fit_transform(labels)
 print(train_encoded)
 """
+# Evaluate model
+errors = []
+for (name, tag) in devtest_names:
+     guess = classifier.classify(gender_features(name))
+     if guess != tag:
+         errors.append( (tag, guess, name) )
 
+
+for (tag, guess, name) in sorted(errors):
+     print('correct={:<8} guess={:<8s} name={:<30}'.format(tag, guess, name))
+
+# Some suffixes that are more than one letter can be indicative of name genders
+# Use this observation
+def gender_features(word):
+     return {'suffix1': word[-1:],
+             'suffix2': word[-2:]}
+
+# Retrain model
+train_set = [(gender_features(n), gender) for (n, gender) in train_names]
+devtest_set = [(gender_features(n), gender) for (n, gender) in devtest_names]
+classifier = nltk.NaiveBayesClassifier.train(train_set)
+print(nltk.classify.accuracy(classifier, devtest_set))
 
 
 
