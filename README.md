@@ -8,3 +8,5 @@ Gensim - contains some of my work with gensim. I find it quite interesting, but 
 Nltk_book-Jupyter - contains some of my basic work with NLTK Book.
 
 Nltk_Jupyter-Notebooks - is collection of algorithms used with Spam filtering.
+
+2020 - current work
