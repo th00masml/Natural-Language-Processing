@@ -1,1 +1,13 @@
 Current projects around NLP.
+
+Clusteing presents some of my real world projects with text clustering. I needed to make it private,
+so some of the data regarding data has general names. Hope it wont' create any issues.
+
+BERT contains some of my work with BERT, ELMo and co.
+
+http://jalammar.github.io/illustrated-bert/
+
+Spacy is not containing anything original, or fully original. I'm using it as some kind of cheat sheet.
+
+Pre-trained word vectors folder contains notebooks using GloVe: Global Vectors for Word Representation
+
