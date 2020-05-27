@@ -47,7 +47,6 @@ full = ''.join(result)
 pprint(full)"""
 
  # Customized summarizer
-
 from transformers import *
 
 # Load model, model config and tokenizer via Transformers
